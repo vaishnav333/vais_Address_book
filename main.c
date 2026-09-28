@@ -7,15 +7,15 @@ int main() {
     initialize(&addressBook); // Initialize the address book
 
     do {
-        printf("\nAddress Book Menu:\n");
-        printf("1. Create contact\n");
-        printf("2. Search contact\n");
-        printf("3. Edit contact\n");
-        printf("4. Delete contact\n");
-        printf("5. List all contacts\n");
-    	printf("6. Save contacts\n");		
-        printf("7. Exit\n");
-        printf("Enter your choice: ");
+        printf("\n-------Address Book Menu:------\n");
+        printf("---1. Create contact   --\n");
+        printf("---2. Search contact   --\n");
+        //printf("---3. Edit contact --\n");
+        printf("---4. Delete contact   --\n");
+        printf("---5. List all contacts--\n");
+    	//printf("---6. Save contacts  --\n");		
+        printf("---7. Exit             --\n");
+        printf("Enter your choice: \n");
         scanf("%d", &choice);
         
         switch (choice) {
@@ -32,7 +32,7 @@ int main() {
                 deleteContact(&addressBook);
                 break;
             case 5:          
-                listContacts(&addressBook, sortChoice);
+                listContacts(&addressBook);
                 break;
             case 6:
                 printf("Saving...\n");
