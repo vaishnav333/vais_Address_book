@@ -13,7 +13,11 @@ typedef struct {
     Contact contacts[100];
     int contactCount;
 } AddressBook;
-int find_i(AddressBook*addressBook,char input[],int criteria_s);
+
+void edit_index(int i,AddressBook *addressBook);
+
+void disp_heading();
+int find_matching(AddressBook *addressBook,int matching_index[],int * found);
 void disp_i(AddressBook*addressBook,int i);
 void delete_index(int,AddressBook*addressBook);
 
@@ -21,9 +25,9 @@ void sort_name(AddressBook *addressBook);
 void sort_phone(AddressBook *addressBook);
 void sort_email(AddressBook *addressBook);
 
-int validate_name(char *name);
+int validate_name(char name[],AddressBook *addressBook);
 int validate_phone(char phn[],AddressBook *addressBook);
-int validate_email(char email[]);
+int validate_email(char email[],AddressBook *addressBook);
 
 
 void createContact(AddressBook *addressBook);
